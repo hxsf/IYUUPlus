@@ -399,17 +399,17 @@ class MoveTorrent extends AutoReseed
         if (!empty($notify['notify_on_change'])) {
             switch ($notify['notify_on_change']) {
                 case 'on':
-                    if (self::$notifyMsg['reseedSuccess'] === 0 && self::$notifyMsg['reseedError'] === 0) {
+                    if (self::$notifyMsg['MoveSuccess'] === 0 && self::$notifyMsg['MoveError'] === 0) {
                         return '';
                     }
                     break;
                 case 'only_success':
-                    if (self::$notifyMsg['reseedSuccess'] === 0) {
+                    if (self::$notifyMsg['MoveSuccess'] === 0) {
                         return '';
                     }
                     break;
                 case 'only_fails':
-                    if (self::$notifyMsg['reseedError'] === 0) {
+                    if (self::$notifyMsg['MoveError'] === 0) {
                         return '';
                     }
                     break;
